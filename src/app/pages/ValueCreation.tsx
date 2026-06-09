@@ -434,15 +434,6 @@ function Section05StrategicValue() {
           
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-              style={{ opacity: 0.10 }}
-            >
-              04
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
 
           <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
             Strategic Value
