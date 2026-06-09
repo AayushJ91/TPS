@@ -67,7 +67,7 @@ export default function Navigation() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
-        <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between relative z-50">
+        <div className="max-w-[1400px] mx-auto px-6 py-6 flex items-center justify-between relative z-50">
           <Link to="/" className="flex items-center gap-3 group" style={{ fontSize: "1.05rem" }}>
             <TpsWordmark variant="light" showTagline={false} className="transition-opacity group-hover:opacity-75" />
             {isHome && (

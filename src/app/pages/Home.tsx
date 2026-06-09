@@ -60,7 +60,7 @@ function HeroSection() {
   };
 
   return (
-    <section className="h-[70vh] min-h-[500px] flex items-center justify-center px-6 bg-white relative">
+    <section className="h-[70vh] min-h-[50px] flex items-center justify-center px-6 bg-white relative">
       <div className="max-w-[900px] mx-auto text-center">
         {/* Category Label */}
         <motion.p
