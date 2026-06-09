@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import TpsWordmark from "./TpsWordmark";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,12 +9,8 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
-            <Link to="/" className="inline-block mb-4">
-              <img
-                src="/logo.png"
-                alt="TPS Logo"
-                className="h-12 w-auto object-contain transition-opacity hover:opacity-85"
-              />
+            <Link to="/" className="inline-block mb-5 group" style={{ fontSize: "1rem" }}>
+              <TpsWordmark variant="light" showTagline={true} className="transition-opacity group-hover:opacity-75" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Infrastructure Systems IP Company

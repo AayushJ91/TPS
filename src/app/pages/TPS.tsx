@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useIsScreenshotOrAutomated } from "../components/ui/utils";
+import TpsWordmark from "../components/TpsWordmark";
 
 const getFadeVariants = (isScreenshot: boolean) => ({
   fade: isScreenshot ? false : { opacity: 0, y: 20 },
@@ -63,11 +64,9 @@ function HeroSection() {
           className="space-y-8"
         >
           <div>
-            <img
-              src="/logo.png"
-              alt="TPS Logo"
-              className="h-16 w-auto object-contain mb-6"
-            />
+            <div className="mb-6" style={{ fontSize: "1.25rem" }}>
+              <TpsWordmark variant="light" showTagline={true} />
+            </div>
             <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-4">
               Institutional Core · IP Developer
             </p>
@@ -110,7 +109,7 @@ function HeroSection() {
           className="mt-16 w-full h-[55vh] min-h-[350px] relative overflow-hidden rounded-xl border border-foreground/10"
         >
           <img
-            src="/hero-bg.jpg"
+            src="/kosi-about-bg.jpeg"
             alt="Strategic Public Infrastructure Corridor"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />

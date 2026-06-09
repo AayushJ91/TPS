@@ -481,7 +481,7 @@ function Section04StrategicCorridors() {
           {/* MOBILE IMAGE BLOCK */}
           <div className="md:hidden w-full mb-8 relative rounded-sm overflow-hidden aspect-[4/3] bg-background border border-foreground/15 shadow-sm">
             <img
-              src={DOMAIN_IMAGES.corridor}
+              src="/app-sec4.jpeg"
               alt="Strategic Infrastructure Corridors"
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
@@ -530,7 +530,7 @@ function Section04StrategicCorridors() {
         <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
-              src={DOMAIN_IMAGES.corridor}
+              src={"/app-sec4.jpeg"}
               alt="Aerial view — strategic multi-use infrastructure corridor"
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"

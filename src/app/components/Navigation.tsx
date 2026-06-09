@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
+import TpsWordmark from "./TpsWordmark";
 
 const navItems = [
   { path: "/", label: "HOME" },
@@ -67,12 +68,8 @@ export default function Navigation() {
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between relative z-50">
-          <Link to="/" className="flex items-center gap-3 group">
-            <img
-              src="/logo.png"
-              alt="TPS - Infrastructure Energy Resilience"
-              className="h-12 w-auto transition-opacity group-hover:opacity-80"
-            />
+          <Link to="/" className="flex items-center gap-3 group" style={{ fontSize: "1.05rem" }}>
+            <TpsWordmark variant="light" showTagline={false} className="transition-opacity group-hover:opacity-75" />
             {isHome && (
               <motion.div
                 layoutId="home-indicator"
@@ -123,6 +120,13 @@ export default function Navigation() {
             exit="closed"
             className="fixed inset-0 z-[100] bg-[#0b0b0d] text-white flex flex-col overflow-hidden"
           >
+            {/* Mobile overlay top bar with wordmark */}
+            <div className="shrink-0 flex items-center justify-between px-8 pt-8 pb-2">
+              <Link to="/" onClick={() => setIsOpen(false)} style={{ fontSize: "1rem" }}>
+                <TpsWordmark variant="dark" showTagline={false} />
+              </Link>
+            </div>
+
             {/* Scrollable Links Container */}
             <motion.div 
               variants={containerVariants}

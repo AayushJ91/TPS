@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { ArrowRight, Waves, Wind, Activity, Database } from "lucide-react";
 import { useIsScreenshotOrAutomated } from "../components/ui/utils";
+import TpsWordmark from "../components/TpsWordmark";
 
 const getFadeVariants = (isScreenshot: boolean) => ({
   fade: isScreenshot ? false : { opacity: 0, y: 20 },
@@ -263,7 +264,7 @@ function WhatIsIETESection() {
   const anim = getFadeVariants(isScreenshot);
 
   return (
-    <section className="py-32 px-6 bg-foreground text-background">
+    <section className="py-25 px-6 bg-foreground text-background">
       <div className="max-w-[1000px] mx-auto">
         <motion.div
           initial={anim.fade}
@@ -331,7 +332,7 @@ function CoreArchitectureSection() {
   ];
 
   return (
-    <section className="py-40 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F5F5F3" }}>
+    <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F5F5F3" }}>
       <div className="max-w-[1100px] mx-auto">
         {/* Section Label / Chapter Tag */}
         <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-muted-foreground mb-8">
@@ -442,7 +443,7 @@ function ApplicationsSection() {
   ];
 
   return (
-    <section className="py-40 px-6 border-t border-foreground/10" style={{ backgroundColor: "#FAFAF8" }}>
+    <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#FAFAF8" }}>
       <div className="max-w-[1200px] mx-auto">
         {/* Section Label / Chapter Tag */}
         <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-muted-foreground mb-8">
@@ -547,7 +548,7 @@ function ValueCreationSection() {
   ];
 
   return (
-    <section className="py-40 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F2F2F0" }}>
+    <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F2F2F0" }}>
       <div className="max-w-[1000px] mx-auto">
         {/* Section Label / Chapter Tag */}
         <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-muted-foreground mb-8">
@@ -626,7 +627,7 @@ function TPSSection() {
   ];
 
   return (
-    <section className="py-40 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F7F7F5" }}>
+    <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F7F7F5" }}>
       <div className="max-w-[1200px] mx-auto">
         {/* Section Label / Chapter Tag */}
         <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-muted-foreground mb-8">
@@ -641,12 +642,10 @@ function TPSSection() {
             transition={{ duration: 0.8 }}
             className="md:col-span-6 space-y-6"
           >
-            <div className="flex items-center gap-4">
-              <img
-                src="/logo.png"
-                alt="TPS Logo"
-                className="h-12 w-auto object-contain"
-              />
+            <div className="flex flex-col gap-2 mb-2">
+              <div style={{ fontSize: "1.1rem" }}>
+                <TpsWordmark variant="light" showTagline={false} />
+              </div>
               <span className="text-xs font-mono tracking-[0.2em] uppercase text-muted-foreground">Preview Narrative</span>
             </div>
 

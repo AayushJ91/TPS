@@ -43,7 +43,7 @@ function ValueCreationHero() {
     <section ref={ref} className="relative min-h-[85vh] flex items-end overflow-hidden">
       {/* Full-bleed hero image */}
       <motion.img
-        src="/hero-bg.jpg"
+        src="/valCrea-background.jpeg"
         alt="Infrastructure corridor — strategic value"
         style={{ y: imageY }}
         className="absolute inset-0 w-full h-[120%] object-cover object-center"
@@ -114,15 +114,7 @@ function Section02EnergyValue() {
           
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-              style={{ opacity: 0.10 }}
-            >
-              01
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
+          
 
           <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
             Energy Value
@@ -138,7 +130,7 @@ function Section02EnergyValue() {
           {/* MOBILE IMAGE BLOCK */}
           <div className="md:hidden w-full mb-8 relative rounded-sm overflow-hidden aspect-[4/3] bg-background border border-foreground/15 shadow-sm">
             <img
-              src="/hero-bg2.jpg"
+              src="/valCrea-sec1.jpeg"
               alt="Energy Infrastructure Integration"
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
@@ -182,7 +174,7 @@ function Section02EnergyValue() {
         <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
-              src="/hero-bg2.jpg"
+              src="/valCrea-sec1.jpeg"
               alt="Infrastructure corridor with integrated energy systems"
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
@@ -220,7 +212,7 @@ function Section03ResilienceValue() {
         <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
-              src="/hero-bg.jpg"
+              src="/valCrea-sec2.jpeg"
               alt="Resilient infrastructure — climate adaptation"
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
@@ -243,15 +235,6 @@ function Section03ResilienceValue() {
           
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-              style={{ opacity: 0.20 }}
-            >
-              02
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
 
           <p className="text-[10px] tracking-[0.4em] uppercase opacity-50 mb-5">
             Resilience Value
@@ -267,7 +250,7 @@ function Section03ResilienceValue() {
           {/* MOBILE IMAGE BLOCK */}
           <div className="md:hidden w-full mb-8 relative rounded-sm overflow-hidden aspect-[4/3] bg-background border border-foreground/15 shadow-sm">
             <img
-              src="/hero-bg.jpg"
+              src="/valCrea-sec2.jpeg"
               alt="Resilient infrastructure — climate adaptation"
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
@@ -332,16 +315,7 @@ function Section04OperationalValue() {
           
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-              style={{ opacity: 0.10 }}
-            >
-              03
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
-
+          
           <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
             Operational Value
           </p>
@@ -356,7 +330,7 @@ function Section04OperationalValue() {
           {/* MOBILE IMAGE BLOCK */}
           <div className="md:hidden w-full mb-8 relative rounded-sm overflow-hidden aspect-[4/3] bg-background border border-foreground/15 shadow-sm">
             <img
-              src="/hero-bg2.jpg"
+              src="/valCrea-sec3.jpeg"
               alt="Operational intelligence — infrastructure monitoring"
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
@@ -399,7 +373,7 @@ function Section04OperationalValue() {
         <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
-              src="/hero-bg2.jpg"
+              src="/valCrea-sec3.jpeg"
               alt="Operational intelligence — infrastructure monitoring"
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-[center_30%]"
