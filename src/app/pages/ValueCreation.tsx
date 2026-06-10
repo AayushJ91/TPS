@@ -59,9 +59,6 @@ function ValueCreationHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-[10px] tracking-[0.4em] uppercase text-white/50 mb-6">
-              Infrastructure Strategy · Value Framework
-            </p>
             <h1
               className="text-[clamp(2.8rem,7vw,5.5rem)] leading-[1.05] font-medium text-white mb-8 max-w-[800px]"
               style={{ fontFamily: "var(--font-serif)" }}
@@ -73,17 +70,6 @@ function ValueCreationHero() {
               Adaptive Infrastructure–Energy Ecosystems transform these assets
               into multi-value platforms.
             </p>
-
-            {/* Value pillars preview strip */}
-            <div className="flex flex-wrap gap-6 text-[10px] tracking-[0.3em] uppercase text-white/40">
-              <span>Energy Value</span>
-              <span className="text-white/15">·</span>
-              <span>Resilience Value</span>
-              <span className="text-white/15">·</span>
-              <span>Operational Value</span>
-              <span className="text-white/15">·</span>
-              <span>Strategic Value</span>
-            </div>
           </motion.div>
         </div>
       </div>
@@ -114,8 +100,6 @@ function Section02EnergyValue() {
           
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          
-
           <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
             Energy Value
           </p>
@@ -180,10 +164,6 @@ function Section02EnergyValue() {
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
           </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 01: Energy Infrastructure Integration
-          </div>
         </div>
         {/* Subtle grid pattern background for the frame to sit on */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
@@ -217,10 +197,6 @@ function Section03ResilienceValue() {
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
-          </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 02: Structural Resilience Sizing
           </div>
         </div>
         {/* Subtle grid pattern background for the frame to sit on */}
@@ -379,10 +355,6 @@ function Section04OperationalValue() {
               className="absolute inset-0 w-full h-[115%] object-cover object-[center_30%]"
             />
           </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 03: Operational Monitoring & Analytics
-          </div>
         </div>
         {/* Subtle grid pattern background for the frame to sit on */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
@@ -416,10 +388,6 @@ function Section05StrategicValue() {
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
-          </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 04: Land Optimization Strategy
           </div>
         </div>
         {/* Subtle grid pattern background for the frame to sit on */}
@@ -499,7 +467,7 @@ function Section06ClosingManifesto() {
   const isScreenshot = useIsScreenshotOrAutomated();
 
   return (
-    <section className="bg-foreground text-background py-32 md:py-48 px-6 text-center select-none">
+    <section className="bg-foreground text-background py-25 md:py-25 px-6 text-center select-none">
       <div className="max-w-[1000px] mx-auto">
         <motion.div
           initial={isScreenshot ? false : { opacity: 0, y: 30 }}
@@ -539,9 +507,6 @@ function Section06ClosingManifesto() {
             an active participant in future resilience and energy systems.
           </p>
 
-          <p className="text-[9px] tracking-[0.4em] uppercase opacity-30">
-            Institutional · Not speculative · Measurable value
-          </p>
         </motion.div>
       </div>
     </section>

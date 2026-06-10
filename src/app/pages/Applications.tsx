@@ -124,9 +124,6 @@ function Section01FloodControl() {
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
           </div>
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 04: Flood Control Embankments
-          </div>
         </div>
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
@@ -310,10 +307,6 @@ function Section02Highways() {
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
           </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 02: Transportation Corridors & Energy
-          </div>
         </div>
         {/* Subtle grid pattern background for the frame to sit on */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
@@ -347,9 +340,6 @@ function Section03WaterInfrastructure() {
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
-          </div>
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 06: Water Infrastructure Systems
           </div>
         </div>
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
@@ -535,10 +525,6 @@ function Section04StrategicCorridors() {
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
-          </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 04: Strategic Infrastructure Corridors
           </div>
         </div>
         {/* Subtle grid pattern background for the frame to sit on */}

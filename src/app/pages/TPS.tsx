@@ -157,9 +157,6 @@ function WhyTPSSection() {
           transition={{ duration: 0.8 }}
           className="md:col-span-5 space-y-6"
         >
-          <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground font-mono">
-            01 / Genesis Narrative
-          </p>
           <h2
             className="text-3xl md:text-4xl text-foreground font-medium leading-tight font-serif"
             style={{ fontFamily: "var(--font-serif)" }}
@@ -228,9 +225,6 @@ function EcosystemArchitectureSection() {
           transition={{ duration: 0.8 }}
           className="md:col-span-5 space-y-6"
         >
-          <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground font-mono">
-            02 / Systems Portfolio
-          </p>
           <h2
             className="text-3xl md:text-4xl text-foreground font-medium leading-tight font-serif"
             style={{ fontFamily: "var(--font-serif)" }}
@@ -319,9 +313,6 @@ function DevelopmentJourneySection() {
           transition={{ duration: 0.8 }}
           className="max-w-[800px]"
         >
-          <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground font-mono mb-4">
-            03 / Methodology Evolution
-          </p>
           <h2
             className="text-3xl md:text-4xl text-foreground font-medium leading-tight font-serif"
             style={{ fontFamily: "var(--font-serif)" }}
@@ -393,9 +384,6 @@ function AreasOfEngagementSection() {
           className="md:col-span-5 space-y-8"
         >
           <div>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground font-mono mb-4">
-              04 / Focus Domains
-            </p>
             <h2
               className="text-3xl md:text-4xl text-foreground font-medium leading-tight font-serif"
               style={{ fontFamily: "var(--font-serif)" }}

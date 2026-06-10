@@ -100,7 +100,7 @@ function ArchitectureStatement() {
   const anim = getFadeVariants(isScreenshot);
 
   return (
-    <section className="px-6 py-24 md:py-32 bg-muted/5 border-b border-foreground/10">
+    <section className="px-6 py-20 md:py-28 bg-muted/5 border-b border-foreground/10">
       <div className="max-w-[800px] mx-auto text-center">
         <motion.div
           initial={anim.fade}
@@ -286,10 +286,6 @@ function EECLayerSection() {
               className="w-full h-auto block bg-white"
             />
           </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 01: Physical Infrastructure Layer (EEC)
-          </div>
         </div>
         {/* Subtle grid pattern background for the frame to sit on */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
@@ -458,7 +454,7 @@ function SCLOULayerSection() {
 
       {/* Right — cinematic image */}
       <div className="hidden md:flex md:w-[60%] items-center justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
+        <div className="w-full max-w-[85%] aspect-[32/20] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
               src="/arch-sclou.jpeg"
@@ -466,10 +462,6 @@ function SCLOULayerSection() {
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
-          </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 02: Structural Intelligence Layer (SCLOU)
           </div>
         </div>
         {/* Subtle grid pattern background for the frame to sit on */}
@@ -504,10 +496,6 @@ function EFALayerSection() {
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
-          </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 03: Infrastructure–Energy Coordination Layer (EFA)
           </div>
         </div>
         {/* Subtle grid pattern background for the frame to sit on */}

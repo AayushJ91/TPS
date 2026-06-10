@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import { ArrowRight, Waves, Wind, Activity, Database } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useIsScreenshotOrAutomated } from "../components/ui/utils";
 import TpsWordmark from "../components/TpsWordmark";
 
@@ -197,22 +197,22 @@ function WhyInfrastructureSection() {
 
   const challenges = [
     {
-      icon: Waves,
+      index: "01",
       title: "Climate Stress",
       description: "Increasing frequency and severity of extreme weather events demand adaptive infrastructure response systems.",
     },
     {
-      icon: Activity,
+      index: "02",
       title: "Aging Infrastructure",
       description: "Critical systems require modernization beyond traditional maintenance and replacement cycles.",
     },
     {
-      icon: Wind,
+      index: "03",
       title: "Energy Transition",
       description: "Infrastructure must actively participate in distributed energy generation and grid resilience.",
     },
     {
-      icon: Database,
+      index: "04",
       title: "Operational Complexity",
       description: "Multi-domain systems require unified intelligence layers for real-time optimization and coordination.",
     },
@@ -237,20 +237,30 @@ function WhyInfrastructureSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {challenges.map((challenge, index) => (
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-0 divide-y divide-foreground/8">
+          {challenges.map((challenge, i) => (
             <motion.div
-              key={index}
+              key={i}
               initial={anim.fade}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: isScreenshot ? 0 : index * 0.1 }}
-              className="border-l-2 border-foreground/20 pl-8"
+              transition={{ duration: 0.6, delay: isScreenshot ? 0 : i * 0.08 }}
+              className="py-10 flex gap-8"
             >
-              <challenge.icon className="w-8 h-8 mb-4 opacity-70" strokeWidth={1.5} />
-              <h3 className="text-2xl mb-3" style={{ fontFamily: "var(--font-serif)" }}>
-                {challenge.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">{challenge.description}</p>
+              {/* Editorial ordinal */}
+              <span
+                className="text-[11px] font-mono tracking-[0.15em] shrink-0 mt-[3px]"
+                style={{ color: "hsl(42 55% 52%)" }}
+              >
+                {challenge.index}
+              </span>
+              <div>
+                <p className="text-[10px] tracking-[0.25em] uppercase font-semibold text-foreground/55 mb-3">
+                  {challenge.title}
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed max-w-[420px]">
+                  {challenge.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -271,9 +281,6 @@ function WhatIsIETESection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-xs tracking-[0.3em] uppercase opacity-70 mb-6">
-            Category Definition
-          </p>
           <h2
             className="text-5xl md:text-7xl mb-12"
             style={{ fontFamily: "var(--font-serif)" }}
@@ -334,11 +341,6 @@ function CoreArchitectureSection() {
   return (
     <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F5F5F3" }}>
       <div className="max-w-[1100px] mx-auto">
-        {/* Section Label / Chapter Tag */}
-        <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-muted-foreground mb-8">
-          Chapter 01 · Operating Architecture
-        </div>
-
         <motion.div
           initial={anim.fade}
           animate={{ opacity: 1, y: 0 }}
@@ -445,11 +447,6 @@ function ApplicationsSection() {
   return (
     <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#FAFAF8" }}>
       <div className="max-w-[1200px] mx-auto">
-        {/* Section Label / Chapter Tag */}
-        <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-muted-foreground mb-8">
-          Chapter 02 · Deployment Domains
-        </div>
-
         <motion.div
           initial={anim.fade}
           animate={{ opacity: 1, y: 0 }}
@@ -550,11 +547,6 @@ function ValueCreationSection() {
   return (
     <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F2F2F0" }}>
       <div className="max-w-[1000px] mx-auto">
-        {/* Section Label / Chapter Tag */}
-        <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-muted-foreground mb-8">
-          Chapter 03 · Strategic Value
-        </div>
-
         <motion.div
           initial={anim.fade}
           animate={{ opacity: 1, y: 0 }}
@@ -629,11 +621,6 @@ function TPSSection() {
   return (
     <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F7F7F5" }}>
       <div className="max-w-[1200px] mx-auto">
-        {/* Section Label / Chapter Tag */}
-        <div className="text-[10px] font-mono tracking-[0.3em] uppercase text-muted-foreground mb-8">
-          Chapter 04 · Institutional Owner
-        </div>
-
         <div className="grid md:grid-cols-12 gap-12 items-center">
           {/* Left Column */}
           <motion.div

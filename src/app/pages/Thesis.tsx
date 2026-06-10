@@ -64,36 +64,6 @@ function ThesisHero() {
             </p>
           </div>
         </motion.div>
-
-        {/* Running sections index — clean numbered grid */}
-        <motion.div
-          initial={anim.fadeOnly}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-14 pt-6 border-t border-foreground/10"
-        >
-          <p className="text-[12px] tracking-[0.5em] uppercase text-muted-foreground/100 mb-5">
-            Contents
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4">
-            {[
-              { n: "01", title: "Why Infrastructure Must Evolve" },
-              { n: "02", title: "Land Constraints & Energy Transition" },
-              { n: "03", title: "Infrastructure Failure & Resilience" },
-              { n: "04", title: "Public Asset Optimization" },
-              { n: "05", title: "Adaptive Infrastructure–Energy Ecosystems" },
-            ].map((item) => (
-              <div key={item.n} className="flex items-baseline gap-2.5">
-                <span className="font-mono text-[14px] font-bold text-foreground/35 shrink-0">
-                  {item.n}
-                </span>
-                <span className="text-[14px] tracking-wide text-foreground/60">
-                  {item.title}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
@@ -122,20 +92,7 @@ function Section01WhyEvolve() {
           
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none opacity-8 select-none"
-              style={{ opacity: 0.08 }}
-            >
-              01
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
-
-          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
-            The Imperative
-          </p>
-
+          
           <h2
             className="text-[clamp(1.8rem,3.5vw,2.6rem)] leading-[1.2] font-medium mb-8"
             style={{ fontFamily: "var(--font-serif)" }}
@@ -170,8 +127,8 @@ function Section01WhyEvolve() {
       </div>
 
       {/* Right — cinematic image */}
-      <div className="hidden md:flex md:w-[62%] items-center justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
+      <div className="hidden md:flex md:w-[62%]  justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
+        <div className="w-full max-w-[85%] aspect-[16/5] border border-foreground/15 shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
               src="/thesis-1.JPG"
@@ -179,10 +136,6 @@ function Section01WhyEvolve() {
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
-          </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 01: Infrastructure Corridor Transformation
           </div>
         </div>
         {/* Subtle grid pattern background for the frame to sit on */}
@@ -208,8 +161,8 @@ function Section02LandConstraints() {
   return (
     <section ref={ref} className="min-h-screen flex items-stretch bg-muted/20">
       {/* Left — cinematic image */}
-      <div className="hidden md:flex md:w-[55%] items-center justify-center p-12 bg-muted/5 border-r border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
+      <div className="hidden md:flex md:w-[55%] justify-center p-12 bg-muted/5 border-r border-foreground/10 relative">
+        <div className="w-full max-w-[85%] aspect-[20/10] border border-foreground/15 shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
               src="/thesis-2.jpeg"
@@ -217,10 +170,6 @@ function Section02LandConstraints() {
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
-          </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 02: Land Constraints & Infrastructure Integration
           </div>
         </div>
         {/* Subtle grid pattern background for the frame to sit on */}
@@ -235,19 +184,6 @@ function Section02LandConstraints() {
           
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-              style={{ opacity: 0.08 }}
-            >
-              02
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
-
-          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
-            The Constraint
-          </p>
 
           <h2
             className="text-[clamp(1.8rem,3.2vw,2.4rem)] leading-[1.2] font-medium mb-8"
@@ -324,20 +260,6 @@ function Section03InfraEnergy() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-              style={{ opacity: 0.08 }}
-            >
-              03
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
-
-          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
-            THE RESILIENCE CHALLENGE
-          </p>
-
           <h2
             className="text-[clamp(1.8rem,3.2vw,2.4rem)] leading-[1.2] font-medium mb-8"
             style={{ fontFamily: "var(--font-serif)" }}
@@ -398,8 +320,8 @@ function Section03InfraEnergy() {
       </div>
 
       {/* Right — cinematic image */}
-      <div className="hidden md:flex md:w-[62%] items-center justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
+      <div className="hidden md:flex md:w-[62%] items- justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
+        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
               src="/thesis-3.jpeg"
@@ -407,10 +329,6 @@ function Section03InfraEnergy() {
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
-          </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 03: Failure Interconnection &amp; Resilience
           </div>
         </div>
         {/* Subtle grid pattern background */}
@@ -434,10 +352,10 @@ function Section04PublicAssets() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/20">
+    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/30">
       {/* Left — cinematic image */}
-      <div className="hidden md:flex md:w-[55%] items-center justify-center p-12 bg-muted/5 border-r border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
+      <div className="hidden md:flex md:w-[55%] items- justify-center p-12 bg-muted/5 border-r border-foreground/10 relative">
+        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
               src="/thesis-4.jpeg"
@@ -445,10 +363,6 @@ function Section04PublicAssets() {
               style={{ y: imageY }}
               className="absolute inset-0 w-full h-[115%] object-cover object-center"
             />
-          </div>
-          {/* Legend / Figure label */}
-          <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-            Figure 04: Public Infrastructure Asset Integration
           </div>
         </div>
         {/* Subtle grid pattern background */}
@@ -462,19 +376,6 @@ function Section04PublicAssets() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-              style={{ opacity: 0.08 }}
-            >
-              04
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
-
-          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
-            PUBLIC ASSET OPTIMIZATION
-          </p>
 
           <h2
             className="text-[clamp(1.8rem,3.2vw,2.4rem)] leading-[1.2] font-medium mb-8"
@@ -562,19 +463,6 @@ function Section05Ecosystems() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="flex items-center gap-4 mb-10">
-              <span
-                className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-                style={{ opacity: 0.08 }}
-              >
-                05
-              </span>
-              <div className="h-px flex-1 bg-foreground/15" />
-            </div>
-
-            <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
-              ADAPTIVE INFRASTRUCTURE-ENERGY ECOSYSTEMS
-            </p>
 
             <h2
               className="text-[clamp(1.8rem,3.2vw,2.4rem)] leading-[1.2] font-medium mb-8"
@@ -636,8 +524,8 @@ function Section05Ecosystems() {
         </div>
 
         {/* Right — cinematic image */}
-        <div className="hidden md:flex md:w-[62%] items-center justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
-          <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
+        <div className="hidden md:flex md:w-[62%] items- justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
+          <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 shadow-lg relative z-10">
             <div className="w-full h-full overflow-hidden relative rounded-sm">
               <motion.img
                 src="/thesis-5.jpeg"
@@ -645,10 +533,6 @@ function Section05Ecosystems() {
                 style={{ y: imageY }}
                 className="absolute inset-0 w-full h-[115%] object-cover object-center"
               />
-            </div>
-            {/* Legend / Figure label */}
-            <div className="absolute -bottom-6 left-2 text-[9px] font-mono tracking-wider text-muted-foreground uppercase">
-              Figure 05: Adaptive Infrastructure-Energy Ecosystem
             </div>
           </div>
           {/* Subtle grid pattern background */}
