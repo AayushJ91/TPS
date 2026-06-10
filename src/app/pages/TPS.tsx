@@ -100,24 +100,6 @@ function HeroSection() {
             </div>
           </div>
         </motion.div>
-
-        {/* Large cinematic image */}
-        <motion.div
-          initial={isScreenshot ? false : { opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.0, delay: 0.2 }}
-          className="mt-16 w-full h-[55vh] min-h-[600px] relative overflow-hidden rounded-xl border border-foreground/10"
-        >
-          <img
-            src="/kosi-about-bg.jpeg"
-            alt="Strategic Public Infrastructure Corridor"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-          <div className="absolute bottom-5 left-6 text-white text-[10px] tracking-[0.3em] uppercase opacity-75 font-mono">
-            REF: SYSTEM CORRIDOR VISUALIZATION · 2026
-          </div>
-        </motion.div>
       </div>
     </section>
   );
@@ -142,7 +124,7 @@ function WhyTPSSection() {
         >
           <div className="overflow-hidden rounded-lg border border-foreground/10 aspect-[16/10] bg-muted/20">
             <img
-              src="/app-strategic-corridor.png"
+              src="/kosi-about-bg.jpeg"
               alt="Public Infrastructure Corridor"
               className="w-full h-full object-cover object-center hover:scale-[1.02] transition-transform duration-700"
             />
