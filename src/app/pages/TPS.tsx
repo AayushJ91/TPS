@@ -106,7 +106,7 @@ function HeroSection() {
           initial={isScreenshot ? false : { opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.0, delay: 0.2 }}
-          className="mt-16 w-full h-[55vh] min-h-[350px] relative overflow-hidden rounded-xl border border-foreground/10"
+          className="mt-16 w-full h-[55vh] min-h-[600px] relative overflow-hidden rounded-xl border border-foreground/10"
         >
           <img
             src="/kosi-about-bg.jpeg"
