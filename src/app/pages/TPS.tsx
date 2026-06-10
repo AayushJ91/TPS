@@ -221,8 +221,7 @@ function EcosystemArchitectureSection() {
               className="text-lg md:text-xl text-foreground font-medium leading-snug font-serif"
               style={{ fontFamily: "var(--font-serif)" }}
             >
-              A unified architecture for resilience, intelligence, and energy participation within existing infrastructure systems.
-            </p>
+              A unified architecture enabling infrastructure assets to participate in resilience, intelligence, and energy systems. </p>
           </div>
         </motion.div>
 
@@ -273,11 +272,11 @@ function EcosystemArchitectureSection() {
    ───────────────────────────────────────────── */
 function DevelopmentJourneySection() {
   const steps = [
-    { num: "01", name: "Observation", desc: "Identifying latent value and structural inefficiencies in passive infrastructure assets." },
+    { num: "01", name: "Observation", desc: "Identifying untapped strategic value within existing infrastructure assets." },
     { num: "02", name: "Concept Development", desc: "Designing structural integrations capable of bridging physical assets and energy pathways." },
     { num: "03", name: "Architecture Development", desc: "Establishing structural, intelligence, and coordination layers within a unified system." },
-    { num: "04", name: "Strategic Vision Frameworks", desc: "Publishing long-term systems blueprints defining infrastructure-energy resilience." },
-    { num: "05", name: "Institutional Engagement", desc: "Aligning technical frameworks with regulatory, engineering, and civic stakeholders." },
+    { num: "04", name: "Strategic Vision Frameworks", desc: "Establishing long-term systems frameworks defining infrastructure-energy resilience." },
+    { num: "05", name: "Institutional Engagement", desc: "Aligning architecture frameworks with engineering, regulatory, and deployment ecosystems." },
     { num: "06", name: "Implementation Frameworks", desc: "Delivering structural specifications and design methodologies for project developers." }
   ];
 
