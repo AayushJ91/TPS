@@ -49,7 +49,7 @@ function ApplicationsHero() {
   const anim = getFadeVariants(isScreenshot);
 
   return (
-    <section className="px-6 py-20 md:py-28 border-b border-foreground/10">
+    <section className="px-6 py-20 md:py-28">
       <div className="max-w-[1200px] mx-auto">
         <motion.div
           initial={anim.fadeOnly}
@@ -58,9 +58,6 @@ function ApplicationsHero() {
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-10"
         >
           <div>
-            <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-6">
-              Deployment Contexts · Infrastructure Domains
-            </p>
             <h1
               className="text-[clamp(3rem,9vw,7rem)] leading-[1.0] tracking-tight font-medium"
               style={{ fontFamily: "var(--font-serif)" }}
@@ -69,7 +66,7 @@ function ApplicationsHero() {
             </h1>
           </div>
           <div className="max-w-[420px]">
-            <p className="text-base text-muted-foreground leading-relaxed">
+            <p className="text-base text-muted-foreground/200 leading-relaxed">
               Adaptive Infrastructure–Energy Ecosystems enable infrastructure
               assets to participate in resilience, intelligence, and energy
               systems while unlocking additional value from existing public
@@ -112,20 +109,19 @@ function Section01FloodControl() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch border-b border-foreground/10 overflow-hidden">
+    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/40 overflow-hidden">
       {/* Left — cinematic image */}
-      <div className="hidden md:flex md:w-[55%] items-center justify-center p-12 bg-muted/5 border-r border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[55%] justify-center p-12 relative">
+        <div className="w-full max-w-[85%] aspect-[16/10]">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src={DOMAIN_IMAGES.flood}
               alt="Flood Control Embankment"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-center"
+              className="absolute inset-0 w-full h-[100%] object-cover object-center"
             />
           </div>
         </div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
 
       {/* Right — text column */}
@@ -135,18 +131,7 @@ function Section01FloodControl() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Section number */}
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-              style={{ opacity: 0.08 }}
-            >
-              01
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
-
-          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
+          <p className="text-[25px] tracking-[0.1em] uppercase text-muted-foreground mb-5">
             Flood Control Embankments
           </p>
 
@@ -220,7 +205,7 @@ function Section02Highways() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/20 border-b border-foreground/10 overflow-hidden">
+    <section ref={ref} className="min-h-screen flex items-stretch overflow-hidden">
       {/* Left — text column */}
       <div className="w-full md:w-[40%] flex flex-col justify-center px-8 md:px-14 py-20 md:py-28">
         <motion.div
@@ -229,18 +214,7 @@ function Section02Highways() {
           
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Section number */}
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-              style={{ opacity: 0.08 }}
-            >
-              02
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
-
-          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
+          <p className="text-[25px] tracking-[0.1em] uppercase text-muted-foreground mb-5">
             Highways & Expressways
           </p>
 
@@ -297,19 +271,17 @@ function Section02Highways() {
       </div>
 
       {/* Right — cinematic image */}
-      <div className="hidden md:flex md:w-[60%] items-center justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[60%] justify-center p-12 bg-muted/5 relative">
+        <div className="w-full max-w-[85%] aspect-[16/10]">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src={DOMAIN_IMAGES.highway}
               alt="Aerial view — modern expressway corridor through landscape"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-center"
+              className="absolute inset-0 w-full h-[100%] object-cover object-center"
             />
           </div>
         </div>
-        {/* Subtle grid pattern background for the frame to sit on */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
     </section>
   );
@@ -329,20 +301,19 @@ function Section03WaterInfrastructure() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch border-b border-foreground/10 overflow-hidden">
+    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/40 overflow-hidden">
       {/* Left — cinematic image */}
-      <div className="hidden md:flex md:w-[55%] items-center justify-center p-12 bg-muted/5 border-r border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[55%] justify-center p-12 bg-muted/5 relative">
+        <div className="w-full max-w-[85%] aspect-[16/10]">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src={DOMAIN_IMAGES.water}
               alt="Water Infrastructure System"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-center"
+              className="absolute inset-0 w-full h-[100%] object-cover object-center"
             />
           </div>
         </div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
 
       {/* Right — text column */}
@@ -352,18 +323,8 @@ function Section03WaterInfrastructure() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Section number */}
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-              style={{ opacity: 0.08 }}
-            >
-              03
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
 
-          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
+          <p className="text-[25px] tracking-[0.1em] uppercase text-muted-foreground mb-5">
             Water Infrastructure Systems
           </p>
 
@@ -437,7 +398,7 @@ function Section04StrategicCorridors() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/20 border-b border-foreground/10 overflow-hidden">
+    <section ref={ref} className="min-h-screen flex items-stretch overflow-hidden">
       {/* Left — text column */}
       <div className="w-full md:w-[40%] flex flex-col justify-center px-8 md:px-14 py-20 md:py-28">
         <motion.div
@@ -446,18 +407,8 @@ function Section04StrategicCorridors() {
           
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Section number */}
-          <div className="flex items-center gap-4 mb-10">
-            <span
-              className="text-[clamp(3.5rem,7vw,5.5rem)] font-black leading-none select-none"
-              style={{ opacity: 0.08 }}
-            >
-              04
-            </span>
-            <div className="h-px flex-1 bg-foreground/15" />
-          </div>
 
-          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
+          <p className="text-[25px] tracking-[0.1em] uppercase text-muted-foreground mb-5">
             Strategic Infrastructure Corridors
           </p>
 
@@ -516,19 +467,17 @@ function Section04StrategicCorridors() {
       </div>
 
       {/* Right — cinematic image */}
-      <div className="hidden md:flex md:w-[60%] items-center justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[60%] justify-center p-12 bg-muted/5 relative">
+        <div className="w-full max-w-[85%] aspect-[16/10]">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src={"/app-sec4.jpeg"}
               alt="Aerial view — strategic multi-use infrastructure corridor"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-center"
+              className="absolute inset-0 w-full h-[100%] object-cover object-center"
             />
           </div>
         </div>
-        {/* Subtle grid pattern background for the frame to sit on */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
     </section>
   );
@@ -542,7 +491,7 @@ function ClosingSection() {
   const isScreenshot = useIsScreenshotOrAutomated();
 
   return (
-    <section className="bg-foreground text-background py-32 md:py-48 px-6 text-center select-none">
+    <section className="bg-foreground text-background py-32 md:py-18 px-6 text-center select-none">
       <div className="max-w-[1000px] mx-auto">
         <motion.div
           initial={isScreenshot ? false : { opacity: 0, y: 30 }}
@@ -590,11 +539,6 @@ function ClosingSection() {
             domains to participate in resilience, intelligence, and energy
             systems while creating additional public value from existing
             infrastructure footprints.
-          </p>
-
-          {/* Publication footnote */}
-          <p className="text-[10px] tracking-[0.3em] uppercase opacity-30">
-            TPS — iETE Applications · Institutional Publication · 2026
           </p>
         </motion.div>
       </div>

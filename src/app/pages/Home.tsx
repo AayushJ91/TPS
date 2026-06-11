@@ -62,16 +62,6 @@ function HeroSection() {
   return (
     <section className="h-[70vh] min-h-[50px] flex items-center justify-center px-6 bg-white relative">
       <div className="max-w-[900px] mx-auto text-center">
-        {/* Category Label */}
-        <motion.p
-          initial={isScreenshot ? false : { opacity: 0, y: -10 }}
-          animate={{ opacity: 0.8, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-8"
-        >
-          INFRASTRUCTURE ENERGY SYSTEMS
-        </motion.p>
-
         {/* Heading Title (Staggered Word Reveal) */}
         <motion.h1
           variants={containerVariants}
@@ -133,7 +123,6 @@ function VisualShowcaseSection() {
             alt="Infrastructure corridor"
             initial={isScreenshot ? false : { opacity: 0, scale: 1.03 }}
             animate={{ opacity: 1, scale: 1.0 }}
-            exit={isScreenshot ? false : { opacity: 0 }}
             transition={{ duration: isScreenshot ? 0 : 1.8, ease: "easeInOut" }}
             className="absolute inset-0 w-full h-full"
             style={{
@@ -197,29 +186,25 @@ function WhyInfrastructureSection() {
 
   const challenges = [
     {
-      index: "01",
       title: "Climate Stress",
       description: "Increasing frequency and severity of extreme weather events demand adaptive infrastructure response systems.",
     },
     {
-      index: "02",
       title: "Aging Infrastructure",
       description: "Critical systems require modernization beyond traditional maintenance and replacement cycles.",
     },
     {
-      index: "03",
       title: "Energy Transition",
       description: "Infrastructure must actively participate in distributed energy generation and grid resilience.",
     },
     {
-      index: "04",
       title: "Operational Complexity",
       description: "Multi-domain systems require unified intelligence layers for real-time optimization and coordination.",
     },
   ];
 
   return (
-    <section className="py-32 px-6 bg-white border-t border-foreground/5">
+    <section className="py-20 px-6  bg-muted/40">
       <div className="max-w-[1200px] mx-auto">
         <motion.div
           initial={anim.fade}
@@ -232,7 +217,7 @@ function WhyInfrastructureSection() {
           >
             Why Infrastructure Must Evolve
           </h2>
-          <p className="text-xl text-muted-foreground max-w-[700px] mb-16">
+          <p className="text-xl text-muted-foreground max-w-[700px] mb-16" spellCheck={false}>
             Contemporary infrastructure faces converging pressures that demand fundamental architectural transformation.
           </p>
         </motion.div>
@@ -246,15 +231,8 @@ function WhyInfrastructureSection() {
               transition={{ duration: 0.6, delay: isScreenshot ? 0 : i * 0.08 }}
               className="py-10 flex gap-8"
             >
-              {/* Editorial ordinal */}
-              <span
-                className="text-[11px] font-mono tracking-[0.15em] shrink-0 mt-[3px]"
-                style={{ color: "hsl(42 55% 52%)" }}
-              >
-                {challenge.index}
-              </span>
               <div>
-                <p className="text-[10px] tracking-[0.25em] uppercase font-semibold text-foreground/55 mb-3">
+                <p className="text-[18px] tracking-[0.1em] uppercase font-sbold text-foreground mb-3">
                   {challenge.title}
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-[420px]">
@@ -274,7 +252,7 @@ function WhatIsIETESection() {
   const anim = getFadeVariants(isScreenshot);
 
   return (
-    <section className="py-25 px-6 bg-foreground text-background">
+    <section className="py-20 px-6 bg-foreground text-background">
       <div className="max-w-[1000px] mx-auto">
         <motion.div
           initial={anim.fade}
@@ -339,7 +317,7 @@ function CoreArchitectureSection() {
   ];
 
   return (
-    <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F5F5F3" }}>
+    <section className="py-20 px-6">
       <div className="max-w-[1100px] mx-auto">
         <motion.div
           initial={anim.fade}
@@ -359,13 +337,12 @@ function CoreArchitectureSection() {
         </motion.div>
 
         {/* Blueprint-style typographic layout */}
-        <div className="border border-foreground/15 p-6 md:p-10 bg-background relative overflow-hidden font-mono text-xs text-muted-foreground mb-16 rounded-xl">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
+        <div className="border border-foreground/30 p-6 md:p-10 bg-background relative overflow-hidden font-mono text-xs text-muted-foreground mb-16 rounded-xl">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_5px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_5px)] bg-[size:20px_20px] pointer-events-none" />
 
           {/* Master Box iETE */}
           <div className="flex flex-col items-center mb-10 relative z-10">
             <div className="text-center border border-foreground/20 px-6 py-4 bg-background max-w-[320px] w-full">
-              <span className="text-[9px] tracking-widest uppercase opacity-60 block mb-1">Ecosystem Framework</span>
               <h3 className="text-sm font-bold tracking-widest text-foreground">iETE</h3>
             </div>
             <div className="h-8 w-px bg-foreground/30 relative">
@@ -379,13 +356,12 @@ function CoreArchitectureSection() {
               <div key={layer.acronym} className="border border-foreground/15 p-5 bg-background flex flex-col justify-between hover:border-foreground/45 transition-colors duration-300 rounded">
                 <div>
                   <div className="flex justify-between items-center mb-3">
-                    <span className="text-[9px] tracking-widest uppercase opacity-55 font-mono">Layer 0{index + 1}</span>
-                    <span className="text-xs font-bold text-foreground tracking-wider font-mono">{layer.acronym}</span>
+                    <span className="text-sm font-bold text-foreground tracking-wider font-mono">{layer.acronym}</span>
                   </div>
-                  <h4 className="text-xs font-semibold text-foreground mb-2" style={{ fontFamily: "var(--font-serif)" }}>
+                  <h4 className="text-s font-semibold text-foreground mb-2" style={{ fontFamily: "var(--font-serif)" }}>
                     {layer.subtitle}
                   </h4>
-                  <p className="text-[10px] leading-relaxed text-muted-foreground/85 font-sans">
+                  <p className="text-[15px] leading-relaxed text-muted-foreground/85 font-sans">
                     {layer.description}
                   </p>
                 </div>
@@ -445,7 +421,7 @@ function ApplicationsSection() {
   ];
 
   return (
-    <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#FAFAF8" }}>
+    <section className="py-20 px-6 bg-muted/40">
       <div className="max-w-[1200px] mx-auto">
         <motion.div
           initial={anim.fade}
@@ -545,7 +521,7 @@ function ValueCreationSection() {
   ];
 
   return (
-    <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F2F2F0" }}>
+    <section className="py-20 px-6">
       <div className="max-w-[1000px] mx-auto">
         <motion.div
           initial={anim.fade}
@@ -564,8 +540,6 @@ function ValueCreationSection() {
         </motion.div>
 
         <div className="grid sm:grid-cols-2 gap-x-12 gap-y-10 mb-16 relative">
-          {/* Vertical Divider line between columns */}
-          <div className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px bg-foreground/10 -translate-x-1/2" />
 
           {valuePillars.map((pillar, index) => (
             <motion.div
@@ -619,7 +593,7 @@ function TPSSection() {
   ];
 
   return (
-    <section className="py-25 px-6 border-t border-foreground/10" style={{ backgroundColor: "#F7F7F5" }}>
+    <section className="py-20 px-6 bg-muted/40">
       <div className="max-w-[1200px] mx-auto">
         <div className="grid md:grid-cols-12 gap-12 items-center">
           {/* Left Column */}
@@ -668,11 +642,9 @@ function TPSSection() {
             <div className="border-t border-foreground/15">
               {highlights.map((highlight, idx) => (
                 <div
-                  key={idx}
                   className="border-b border-foreground/15 py-5 flex items-center justify-between group hover:bg-muted/5 transition-colors duration-300 px-2"
                 >
                   <span className="text-base text-foreground font-sans font-medium">{highlight}</span>
-                  <span className="text-xs font-mono text-muted-foreground opacity-50">0{idx + 1}</span>
                 </div>
               ))}
             </div>

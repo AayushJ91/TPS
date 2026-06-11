@@ -57,7 +57,7 @@ export default function TpsWordmark({
             letterSpacing: "0.28em",
             textTransform: "uppercase",
             color: isLight ? "#8a7d6b" : "#9b9080",
-            marginTop: "0.45em",
+            marginTop: "1.5em",
             whiteSpace: "nowrap",
           }}
         >

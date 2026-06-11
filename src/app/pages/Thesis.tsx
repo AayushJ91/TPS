@@ -37,18 +37,15 @@ function ThesisHero() {
   const anim = getFadeVariants(isScreenshot);
 
   return (
-    <section className="px-6 py-20 md:py-28 border-b border-foreground/10">
+    <section className="px-6 py-20 md:py-28">
       <div className="max-w-[1200px] mx-auto">
         <motion.div
           initial={anim.fadeOnly}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row md:items-end md:justify-between gap-10"
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-4"
         >
           <div>
-            <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-6">
-              Institutional Publication · Infrastructure Category Thesis
-            </p>
             <h1
               className="text-[clamp(3rem,9vw,7rem)] leading-[1.0] tracking-tight font-large"
               style={{ fontFamily: "var(--font-serif)" }}
@@ -56,7 +53,7 @@ function ThesisHero() {
               Thesis
             </h1>
           </div>
-          <div className="max-w-[380px]">
+          <div className="max-w-[420px]">
             <p className="text-base text-muted-foreground/200 leading-relaxed">
               Why infrastructure must become more than a passive physical asset —
               and how a new category of adaptive infrastructure–energy ecosystems
@@ -83,7 +80,7 @@ function Section01WhyEvolve() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch">
+    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/40">
       {/* Left — text column */}
       <div className="w-full md:w-[38%] flex flex-col justify-center px-8 md:px-14 py-20 md:py-28">
         <motion.div
@@ -127,19 +124,17 @@ function Section01WhyEvolve() {
       </div>
 
       {/* Right — cinematic image */}
-      <div className="hidden md:flex md:w-[62%]  justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/5] border border-foreground/15 shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[62%] justify-center p-12 relative">
+        <div className="w-full max-w-[85%] aspect-[16/8] ">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src="/thesis-1.JPG"
               alt="Infrastructure corridor — Samruddhi Expressway"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-center"
+              className="absolute inset-0 w-full h-[100%] object-cover object-center"
             />
           </div>
         </div>
-        {/* Subtle grid pattern background for the frame to sit on */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
     </section>
   );
@@ -159,21 +154,19 @@ function Section02LandConstraints() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/20">
+    <section ref={ref} className="min-h-screen flex items-stretch">
       {/* Left — cinematic image */}
-      <div className="hidden md:flex md:w-[55%] justify-center p-12 bg-muted/5 border-r border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[20/10] border border-foreground/15 shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[55%] justify-center p-12 bg-muted/5 relative">
+        <div className="w-full max-w-[85%] aspect-[20/10]">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src="/thesis-2.jpeg"
               alt="Infrastructure corridor aerial — land utilization"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-center"
+              className="absolute inset-0 w-full h-[100%] object-cover object-center"
             />
           </div>
         </div>
-        {/* Subtle grid pattern background for the frame to sit on */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
 
       {/* Right — text column */}
@@ -252,7 +245,7 @@ function Section03InfraEnergy() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch">
+    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/40">
       {/* Left — text column */}
       <div className="w-full md:w-[38%] flex flex-col justify-center px-8 md:px-14 py-20 md:py-28">
         <motion.div
@@ -320,19 +313,17 @@ function Section03InfraEnergy() {
       </div>
 
       {/* Right — cinematic image */}
-      <div className="hidden md:flex md:w-[62%] items- justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[62%] justify-center p-12">
+        <div className="w-full max-w-[85%] aspect-[16/10]">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src="/thesis-3.jpeg"
               alt="Infrastructure Failure &amp; Resilience"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-center"
+              className="absolute inset-0 w-full h-[100%] object-cover object-center"
             />
           </div>
         </div>
-        {/* Subtle grid pattern background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
     </section>
   );
@@ -352,21 +343,19 @@ function Section04PublicAssets() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/30">
+    <section ref={ref} className="min-h-screen flex items-stretch">
       {/* Left — cinematic image */}
-      <div className="hidden md:flex md:w-[55%] items- justify-center p-12 bg-muted/5 border-r border-foreground/10 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[55%] justify-center p-12 bg-muted/5 relative">
+        <div className="w-full max-w-[85%] aspect-[16/10]">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src="/thesis-4.jpeg"
               alt="Public Asset Optimization"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-center"
+              className="absolute inset-0 w-full h-[100%] object-cover object-center"
             />
           </div>
         </div>
-        {/* Subtle grid pattern background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
 
       {/* Right — text column */}
@@ -453,7 +442,7 @@ function Section05Ecosystems() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex flex-col justify-between">
+    <section ref={ref} className="min-h-screen flex flex-col bg-muted/40 justify-between">
       {/* Content wrapper */}
       <div className="flex-1 flex items-stretch">
         {/* Left — text column */}
@@ -524,43 +513,17 @@ function Section05Ecosystems() {
         </div>
 
         {/* Right — cinematic image */}
-        <div className="hidden md:flex md:w-[62%] items- justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
-          <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 shadow-lg relative z-10">
-            <div className="w-full h-full overflow-hidden relative rounded-sm">
+        <div className="hidden md:flex md:w-[62%] justify-center p-12">
+          <div className="w-full max-w-[85%] aspect-[16/10]">
+            <div className="w-full h-full overflow-hidden relative">
               <motion.img
                 src="/thesis-5.jpeg"
                 alt="Adaptive Infrastructure-Energy Ecosystems"
                 style={{ y: imageY }}
-                className="absolute inset-0 w-full h-[115%] object-cover object-center"
+                className="absolute inset-0 w-full h-[100%] object-cover object-center"
               />
             </div>
           </div>
-          {/* Subtle grid pattern background */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
-        </div>
-      </div>
-
-      {/* Footer — publication footnote + CTA */}
-      <div className="w-full max-w-[1200px] mx-auto px-8 md:px-14 py-8 border-t border-foreground/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground/40">
-          TPS — Infrastructure Operating Architecture · Institutional Publication · 2026
-        </p>
-
-        <div className="flex items-center gap-8">
-          <Link
-            to="/architecture"
-            className="inline-flex items-center gap-2 text-sm tracking-wider uppercase border-b-2 border-foreground pb-1 hover:opacity-60 transition-opacity"
-          >
-            Explore Architecture
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-          <Link
-            to="/value-creation"
-            className="inline-flex items-center gap-2 text-sm tracking-wider uppercase opacity-50 hover:opacity-80 transition-opacity"
-          >
-            Value Creation
-            <ArrowRight className="w-4 h-4" />
-          </Link>
         </div>
       </div>
     </section>

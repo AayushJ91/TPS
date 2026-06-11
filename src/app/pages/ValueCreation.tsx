@@ -91,7 +91,7 @@ function Section02EnergyValue() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch border-b border-foreground/10 overflow-hidden">
+    <section ref={ref} className="min-h-screen flex items-stretch overflow-hidden">
       {/* Left — text column */}
       <div className="w-full md:w-[45%] flex flex-col justify-center px-8 md:px-14 py-20 md:py-28">
         <motion.div
@@ -100,7 +100,7 @@ function Section02EnergyValue() {
           
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
+          <p className="text-[25px] tracking-[0.1em] uppercase text-muted-foreground mb-5">
             Energy Value
           </p>
 
@@ -154,7 +154,7 @@ function Section02EnergyValue() {
       </div>
 
       {/* Right — cinematic image */}
-      <div className="hidden md:flex md:w-[58%] items-center justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
+      <div className="hidden md:flex md:w-[58%] items-center justify-center p-12 bg-muted/5 relative">
         <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
@@ -165,8 +165,6 @@ function Section02EnergyValue() {
             />
           </div>
         </div>
-        {/* Subtle grid pattern background for the frame to sit on */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
     </section>
   );
@@ -186,9 +184,9 @@ function Section03ResilienceValue() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/20 border-b border-foreground/10 overflow-hidden">
+    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/40 overflow-hidden">
       {/* Left — cinematic image */}
-      <div className="hidden md:flex md:w-[55%] items-center justify-center p-12 bg-muted/5 border-r border-foreground/10 relative">
+      <div className="hidden md:flex md:w-[55%] items-center justify-center p-12 bg-muted/5 relative">
         <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
@@ -199,8 +197,6 @@ function Section03ResilienceValue() {
             />
           </div>
         </div>
-        {/* Subtle grid pattern background for the frame to sit on */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
 
       {/* Right — text column */}
@@ -212,7 +208,7 @@ function Section03ResilienceValue() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
 
-          <p className="text-[10px] tracking-[0.4em] uppercase opacity-50 mb-5">
+          <p className="text-[25px] tracking-[0.1em] uppercase opacity-50 mb-5">
             Resilience Value
           </p>
 
@@ -292,7 +288,7 @@ function Section04OperationalValue() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           
-          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
+          <p className="text-[25px] tracking-[0.1em] uppercase text-muted-foreground mb-5">
             Operational Value
           </p>
 
@@ -345,7 +341,7 @@ function Section04OperationalValue() {
       </div>
 
       {/* Right — cinematic image */}
-      <div className="hidden md:flex md:w-[58%] items-center justify-center p-12 bg-muted/5 border-l border-foreground/10 relative">
+      <div className="hidden md:flex md:w-[58%] items-center justify-center p-12 bg-muted/5 relative">
         <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
@@ -356,8 +352,6 @@ function Section04OperationalValue() {
             />
           </div>
         </div>
-        {/* Subtle grid pattern background for the frame to sit on */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
     </section>
   );
@@ -377,9 +371,9 @@ function Section05StrategicValue() {
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/20">
+    <section ref={ref} className="min-h-screen flex items-stretch bg-muted/40">
       {/* Left — cinematic image */}
-      <div className="hidden md:flex md:w-[55%] items-center justify-center p-12 bg-muted/5 border-r border-foreground/10 relative">
+      <div className="hidden md:flex md:w-[55%] items-center justify-center p-12 bg-muted/5 relative">
         <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
           <div className="w-full h-full overflow-hidden relative rounded-sm">
             <motion.img
@@ -390,8 +384,6 @@ function Section05StrategicValue() {
             />
           </div>
         </div>
-        {/* Subtle grid pattern background for the frame to sit on */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.015)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       </div>
 
       {/* Right — text column */}
@@ -403,7 +395,7 @@ function Section05StrategicValue() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
 
-          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-5">
+          <p className="text-[25px] tracking-[0.1em] uppercase text-muted-foreground mb-5">
             Strategic Value
           </p>
 
@@ -467,7 +459,7 @@ function Section06ClosingManifesto() {
   const isScreenshot = useIsScreenshotOrAutomated();
 
   return (
-    <section className="bg-foreground text-background py-25 md:py-25 px-6 text-center select-none">
+    <section className="bg-foreground text-background py-32 md:py-18 px-6 text-center select-none">
       <div className="max-w-[1000px] mx-auto">
         <motion.div
           initial={isScreenshot ? false : { opacity: 0, y: 30 }}
