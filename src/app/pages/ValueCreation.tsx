@@ -154,14 +154,14 @@ function Section02EnergyValue() {
       </div>
 
       {/* Right — cinematic image */}
-      <div className="hidden md:flex md:w-[58%] items-center justify-center p-12 bg-muted/5 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[58%] justify-center p-12 bg-muted/5 relative">
+        <div className="w-full max-w-[85%] aspect-[16/10]">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src="/valCrea-sec1.jpeg"
               alt="Infrastructure corridor with integrated energy systems"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-center"
+              className="absolute inset-0 w-full h-[100%] object-cover object-center"
             />
           </div>
         </div>
@@ -186,14 +186,14 @@ function Section03ResilienceValue() {
   return (
     <section ref={ref} className="min-h-screen flex items-stretch bg-muted/40 overflow-hidden">
       {/* Left — cinematic image */}
-      <div className="hidden md:flex md:w-[55%] items-center justify-center p-12 bg-muted/5 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[55%] justify-center p-12 bg-muted/5 relative">
+        <div className="w-full max-w-[85%] aspect-[16/10]">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src="/valCrea-sec2.jpeg"
               alt="Resilient infrastructure — climate adaptation"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-center"
+              className="absolute inset-0 w-full h-[100%] object-cover object-center"
             />
           </div>
         </div>
@@ -341,14 +341,14 @@ function Section04OperationalValue() {
       </div>
 
       {/* Right — cinematic image */}
-      <div className="hidden md:flex md:w-[58%] items-center justify-center p-12 bg-muted/5 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[58%] justify-center p-12 bg-muted/5 relative">
+        <div className="w-full max-w-[85%] aspect-[16/10]">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src="/valCrea-sec3.jpeg"
               alt="Operational intelligence — infrastructure monitoring"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-[center_30%]"
+              className="absolute inset-0 w-full h-[100%] object-cover object-[center_30%]"
             />
           </div>
         </div>
@@ -373,14 +373,14 @@ function Section05StrategicValue() {
   return (
     <section ref={ref} className="min-h-screen flex items-stretch bg-muted/40">
       {/* Left — cinematic image */}
-      <div className="hidden md:flex md:w-[55%] items-center justify-center p-12 bg-muted/5 relative">
-        <div className="w-full max-w-[85%] aspect-[16/10] border border-foreground/15 p-2 bg-background shadow-lg relative z-10">
-          <div className="w-full h-full overflow-hidden relative rounded-sm">
+      <div className="hidden md:flex md:w-[55%] justify-center p-12 bg-muted/5 relative">
+        <div className="w-full max-w-[85%] aspect-[16/10]">
+          <div className="w-full h-full overflow-hidden relative">
             <motion.img
               src="/hero-bg.jpg"
               alt="Infrastructure corridor — land optimization and strategic value"
               style={{ y: imageY }}
-              className="absolute inset-0 w-full h-[115%] object-cover object-center"
+              className="absolute inset-0 w-full h-[100%] object-cover object-center"
             />
           </div>
         </div>

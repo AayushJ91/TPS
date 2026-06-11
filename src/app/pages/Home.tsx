@@ -60,7 +60,7 @@ function HeroSection() {
   };
 
   return (
-    <section className="h-[70vh] min-h-[50px] flex items-center justify-center px-6 bg-white relative">
+    <section className="h-[60vh] min-h-[50px] flex items-center justify-center px-6 bg-white relative">
       <div className="max-w-[900px] mx-auto text-center">
         {/* Heading Title (Staggered Word Reveal) */}
         <motion.h1
@@ -71,7 +71,7 @@ function HeroSection() {
           style={{ fontFamily: "var(--font-serif)" }}
         >
           {headingWords.map((word, i) => (
-             <motion.span key={i} variants={wordVariants} className="inline-block">
+             <motion.span key={i} className="inline-block">
                {word}
              </motion.span>
           ))}
@@ -607,7 +607,6 @@ function TPSSection() {
               <div style={{ fontSize: "1.1rem" }}>
                 <TpsWordmark variant="light" showTagline={false} />
               </div>
-              <span className="text-xs font-mono tracking-[0.2em] uppercase text-muted-foreground">Preview Narrative</span>
             </div>
 
             <h2
