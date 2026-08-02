@@ -517,7 +517,7 @@ function ClosingSection() {
           </div>
 
           <div className="space-y-2">
-            <p className="opacity-95 font-mono">Email: infotriparna@gmail.com</p>
+            <p className="opacity-95 font-mono">Email: trilok.jha@triparnasystems.com</p>
             <p className="opacity-95 font-mono">Mobile: +91 70212 07522</p>
           </div>
 
